@@ -6,7 +6,7 @@
 
 	<style type="text/css">
 		body{
-			background-color: skyblue;
+			background-color: #90dffe;
 			background-repeat: no-repeat;
 			min-height: 100vh;
 			display: flex;
@@ -16,14 +16,23 @@
 			animation-delay: 3s;
 		}
 		@keyframes dark{
-			0%{
-				background-color: skyblue;
+			0%,100%{
+				background-color: #90dffe;
+			}
+			10%,90%{
+				background-color: #57c1eb;
+			}
+			20%,80%{
+				background-color: #2d91c2;
+			}
+			30%,70%{
+				background-color: #1e528e;
+			}
+			40%,60%{
+				background-color: #071b26;
 			}
 			50%{
-				background-color: black;
-			}
-			100%{
-				background-color: skyblue;
+				background-color: #071b26;
 			}
 		}
 		.solar{
@@ -49,52 +58,52 @@
 			content: '';
 			border-radius: 50%;
 			position: absolute;
-			right: -200px;
-			top: 2px;
+			right: -180px;
+			top: 1px;
 			width: 156px;
 			height: 156px;
-			background: skyblue;
+			background: rgb(144,223,254);
 			animation: move 20s linear;
 			animation-delay: 3s;
 		}
 
 		@keyframes move{
 			0%{
-				background: skyblue;
+				background: #90dffe;
 				transform: translateX(0px);
 			}
 			10%{
-				background: gray;
+				background: #57c1eb;
 			}
 			20%{
-				background: gray;
+				background: #2d91c2;
 			}
 			30%{
-				background: gray;
+				background: #1e528e;
 			}
 			45%{
 				background: #071b26;
-				transform: translateX(-200px);
+				transform: translateX(-180px);
 			}
 			50%{
 				background: #071b26;
-				transform: translateX(-200px);
+				transform: translateX(-180px);
 			}
 			60%{
-				background: gray;
+				background: #071b26;
 			}
 			70%{
-				background: gray;
+				background: #1e528e;
 			}
 			80%{
-				background: gray;
+				background: #2d91c2;
 			}
 			90%{
-				background: gray;
+				background: #57c1eb;
 			}
 			100%{
-				background: skyblue;
-				transform: translateX(-400px);
+				background: #90dffe;
+				transform: translateX(-370px);
 			}
 		}
 
