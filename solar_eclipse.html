@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solar Eclipse</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		body{
+			background-color: skyblue;
+			background-repeat: no-repeat;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			animation: dark 20s linear;
+			animation-delay: 3s;
+		}
+		@keyframes dark{
+			0%{
+				background-color: skyblue;
+			}
+			50%{
+				background-color: black;
+			}
+			100%{
+				background-color: skyblue;
+			}
+		}
+		.solar{
+			width: 160px;
+			height: 160px;
+			background-color: rgb(255,230,0);
+			border-radius: 50%;
+			box-shadow: 0px 0px 20px 15px #fff59d, inset 3px 3px 20px 0 #ffeb3b;
+			position: relative;
+			animation: eclipse 0.5s linear infinite;
+			animation-delay: 3s;
+		}
+		@keyframes eclipse{
+			0%{
+				box-shadow: 0px 0px 20px 15px #fff59d, inset 3px 3px 20px 0 #ffeb3b;
+			}
+			100%{
+				box-shadow: 0px 0px 15px 15px #fff59d, inset 3px 3px 20px 0 #ffeb3b;
+			}
+		}
+
+		.solar::before{
+			content: '';
+			border-radius: 50%;
+			position: absolute;
+			right: -200px;
+			top: 2px;
+			width: 156px;
+			height: 156px;
+			background: skyblue;
+			animation: move 20s linear;
+			animation-delay: 3s;
+		}
+
+		@keyframes move{
+			0%{
+				background: gray;
+				transform: translateX(0px);
+			}
+			10%{
+				background: gray;
+			}
+			20%{
+				background: gray;
+			}
+			30%{
+				background: gray;
+			}
+			40%{
+				background: #071b26;
+				transform: translateX(-200px);
+			}
+			50%{
+				background: #071b26;
+				transform: translateX(-200px);
+			}
+			60%{
+				background: gray;
+			}
+			70%{
+				background: gray;
+			}
+			80%{
+				background: gray;
+			}
+			90%{
+				background: gray;
+			}
+			100%{
+				background: gray;
+				transform: translateX(-400px);
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="solar"></div>
+</body>
+</html>
